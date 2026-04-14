@@ -388,10 +388,11 @@ body.js-enabled .no-js-nav {
 .hero-subtitle {
   color: var(--color-cream-light);
   font-family: var(--font-heading);
-  font-size: 1rem;
+  font-size: clamp(0.7rem, 2.5vw, 1.2rem);
   letter-spacing: 0.2em;
   font-weight: 600;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 /* ---------- Footer ---------- */
@@ -474,20 +475,22 @@ body.js-enabled .no-js-nav {
 .project-title {
   color: var(--color-cream);
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: clamp(1rem, 4.5vw, 3rem);
   letter-spacing: 0.4em;
   font-weight: 300;
   margin-bottom: var(--space-sm);
+  white-space: nowrap;
 }
 
 .project-subtitle {
   color: var(--color-cream-light);
   font-family: var(--font-heading);
-  font-size: 0.85rem;
+  font-size: clamp(0.65rem, 2vw, 0.85rem);
   letter-spacing: 0.2em;
   font-weight: 300;
   text-transform: uppercase;
   margin-bottom: var(--space-lg);
+  white-space: nowrap;
 }
 
 .project-gallery-fullbleed {
@@ -508,20 +511,22 @@ body.js-enabled .no-js-nav {
   gap: 0;
   margin-bottom: 0;
   font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-size: clamp(0.7rem, 2.5vw, 0.95rem);
   letter-spacing: 0.1em;
+  white-space: nowrap;
+  flex-wrap: nowrap;
 }
 
 .filter-tab {
   color: var(--color-sidebar-text);
   cursor: pointer;
-  padding: var(--space-sm) var(--space-md);
+  padding: var(--space-sm) var(--space-sm);
   transition: color 0.3s ease;
   background: none;
   border: none;
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
-  letter-spacing: 0.1em;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
 }
 
 .filter-tab:hover {
@@ -1443,10 +1448,6 @@ a.gallery-item {
 
 /* ---------- Responsive: Tablet (768px+) ---------- */
 @media (min-width: 768px) {
-  .hero-subtitle {
-    font-size: 1.1rem;
-  }
-
   .footer-top {
     flex-direction: row;
     justify-content: space-between;
@@ -1465,18 +1466,8 @@ a.gallery-item {
 
 /* ---------- Responsive: Desktop (1024px+) ---------- */
 @media (min-width: 1024px) {
-  .hero-subtitle {
-    font-size: 1.2rem;
-    letter-spacing: 0.3em;
-  }
-
   .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-  }
-
-  .project-title {
-    font-size: 3rem;
-    letter-spacing: 0.5em;
   }
 }
