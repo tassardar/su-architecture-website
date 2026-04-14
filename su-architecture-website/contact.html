@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | 수 건축사 사무소</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- No-JS fallback navigation -->
+  <nav class="no-js-nav" aria-label="Main navigation (no-JS fallback)">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="project.html">Project</a>
+    <a href="event.html">Event</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="site-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="Site sidebar">
+      <div class="sidebar-logo">
+        <img src="images/logo.png" alt="SU Architect" class="sidebar-logo-img">
+      </div>
+      <div class="sidebar-company">
+        <div class="sidebar-company-en">SU Architect</div>
+        <div class="sidebar-company-ko">수 건축사 사무소</div>
+      </div>
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="project.html">Project</a>
+        <a href="event.html">Event</a>
+        <a href="contact.html" class="is-active">Contact</a>
+      </nav>
+      <div class="sidebar-social">
+        <a href="https://www.instagram.com/su_architect_/" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Hamburger Button (mobile) -->
+    <button class="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">
+      <div class="hamburger-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Navigation Overlay (mobile) -->
+    <div class="nav-overlay" aria-hidden="true">
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="project.html">Project</a>
+        <a href="event.html">Event</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <section class="page-section contact-page">
+        <h1 class="section-header">C O N T A C T &nbsp; U S</h1>
+
+        <div class="contact-info">
+          <p><span class="contact-label">Tel.</span> 031-666-7088</p>
+          <p><span class="contact-label">Email.</span> ds70888@naver.com</p>
+          <p><span class="contact-label">Address.</span> 경기도 평택시 탄현로 11</p>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="contact-name">이름 <span class="required-mark">*</span></label>
+            <input type="text" id="contact-name" name="name" required placeholder="이름을 입력해주세요">
+            <span class="error-message" id="error-name"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">이메일 <span class="required-mark">*</span></label>
+            <input type="email" id="contact-email" name="email" required placeholder="이메일 주소를 입력해주세요">
+            <span class="error-message" id="error-email"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-phone">전화번호</label>
+            <input type="tel" id="contact-phone" name="phone" placeholder="전화번호를 입력해주세요">
+            <span class="error-message" id="error-phone"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">문의 내용 <span class="required-mark">*</span></label>
+            <textarea id="contact-message" name="message" rows="6" required placeholder="문의 내용을 입력해주세요"></textarea>
+            <span class="error-message" id="error-message"></span>
+          </div>
+          <button type="submit" class="form-submit-btn">문의하기</button>
+        </form>
+
+        <div class="form-confirmation" id="formConfirmation" aria-live="polite">
+          <p class="confirmation-text">문의가 성공적으로 접수되었습니다.<br>빠른 시일 내에 연락드리겠습니다.</p>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-top">
+            <div class="footer-info">
+              <p>Tel. 031-666-7088</p>
+              <p>경기도 평택시 탄현로 11</p>
+              <p class="footer-representative">대표: 안 재우</p>
+              <p class="footer-registration">사업자등록번호: 492-34-0117</p>
+            </div>
+            <div class="footer-social">
+              <a href="https://www.instagram.com/su_architect_/" target="_blank" class="social-link" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            © 2025 수 건축사 사무소. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
