@@ -5,8 +5,8 @@
 
 /* ---------- CSS Custom Properties ---------- */
 :root {
-  --color-dark-red: #5C3338;
-  --color-darker-red: #6B3D42;
+  --color-dark-red: #4E2528;
+  --color-darker-red: #5A2E33;
   --color-bright-red: #C4A882;
   --color-accent-red: #D4B896;
   --color-white: #FFFFFF;
@@ -15,7 +15,7 @@
   --color-cream: #E8D5B7;
   --color-cream-light: rgba(232, 213, 183, 0.85);
 
-  --color-sidebar-bg: #4A2530;
+  --color-sidebar-bg: #3D1A20;
   --color-sidebar-text: rgba(232, 213, 183, 0.7);
   --color-sidebar-text-active: #E8D5B7;
 
@@ -365,7 +365,7 @@ body.js-enabled .no-js-nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(107, 61, 66, 0.35);
+  background-color: rgba(90, 46, 51, 0.35);
 }
 
 .hero-with-bg .hero-title,
@@ -378,10 +378,11 @@ body.js-enabled .no-js-nav {
 .hero-title {
   color: var(--color-cream);
   font-family: var(--font-heading);
-  font-size: 2.5rem;
+  font-size: clamp(1.2rem, 5vw, 3.5rem);
   letter-spacing: 0.4em;
   font-weight: 700;
   margin-bottom: var(--space-lg);
+  white-space: nowrap;
 }
 
 .hero-subtitle {
@@ -666,7 +667,7 @@ a.gallery-item {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(92, 51, 56, 0.70);
+  background-color: rgba(78, 37, 40, 0.70);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -966,14 +967,14 @@ a.gallery-item {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(107, 61, 66, 0.25);
+  background-color: rgba(90, 46, 51, 0.25);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 
 .project-modal-content {
   position: relative;
-  background-color: rgba(92, 51, 56, 0.92);
+  background-color: rgba(78, 37, 40, 0.92);
   border-radius: 16px;
   max-width: 1400px;
   width: 95%;
@@ -1266,14 +1267,14 @@ a.gallery-item {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(107, 61, 66, 0.25);
+  background-color: rgba(90, 46, 51, 0.25);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
 
 .blog-modal-content {
   position: relative;
-  background-color: rgba(92, 51, 56, 0.95);
+  background-color: rgba(78, 37, 40, 0.95);
   border-radius: 16px;
   max-width: 1000px;
   width: 92%;
@@ -1442,10 +1443,6 @@ a.gallery-item {
 
 /* ---------- Responsive: Tablet (768px+) ---------- */
 @media (min-width: 768px) {
-  .hero-title {
-    font-size: 3rem;
-  }
-
   .hero-subtitle {
     font-size: 1.1rem;
   }
@@ -1468,11 +1465,6 @@ a.gallery-item {
 
 /* ---------- Responsive: Desktop (1024px+) ---------- */
 @media (min-width: 1024px) {
-  .hero-title {
-    font-size: 3.5rem;
-    letter-spacing: 0.5em;
-  }
-
   .hero-subtitle {
     font-size: 1.2rem;
     letter-spacing: 0.3em;
