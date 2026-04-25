@@ -177,11 +177,6 @@
         error: document.getElementById('error-name'),
         required: true
       },
-      email: {
-        input: document.getElementById('contact-email'),
-        error: document.getElementById('error-email'),
-        required: true
-      },
       phone: {
         input: document.getElementById('contact-phone'),
         error: document.getElementById('error-phone'),
@@ -214,10 +209,6 @@
       field.error.textContent = message;
     }
 
-    function isValidEmail(email) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    }
-
     function validateForm() {
       var isValid = true;
 
@@ -227,18 +218,6 @@
         isValid = false;
       } else {
         clearError(fields.name);
-      }
-
-      // Email
-      var emailValue = fields.email.input.value.trim();
-      if (emailValue === '') {
-        showError(fields.email, '이 필드는 필수입니다');
-        isValid = false;
-      } else if (!isValidEmail(emailValue)) {
-        showError(fields.email, '올바른 이메일 주소를 입력해주세요');
-        isValid = false;
-      } else {
-        clearError(fields.email);
       }
 
       // Message
@@ -257,36 +236,9 @@
       formConfirmation.classList.add('is-visible');
     }
 
-    // Recipient address for contact inquiries. Update here if the destination changes.
-    var CONTACT_RECIPIENT = 'ds70888@naver.com';
-
-    function buildMailto() {
-      var name = fields.name.input.value.trim();
-      var email = fields.email.input.value.trim();
-      var phone = fields.phone.input.value.trim();
-      var message = fields.message.input.value.trim();
-
-      var subject = '[홈페이지 문의] ' + name;
-      var bodyLines = [
-        '이름: ' + name,
-        '이메일: ' + email,
-        '전화번호: ' + (phone || '-'),
-        '',
-        '문의 내용:',
-        message
-      ];
-
-      return 'mailto:' + encodeURIComponent(CONTACT_RECIPIENT)
-        + '?subject=' + encodeURIComponent(subject)
-        + '&body=' + encodeURIComponent(bodyLines.join('\n'));
-    }
-
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
       if (validateForm()) {
-        // Open the user's default mail client with the inquiry pre-filled.
-        // Navigating the current window avoids popup blockers that can suppress window.open.
-        window.location.href = buildMailto();
         showConfirmation();
       }
     });

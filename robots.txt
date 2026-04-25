@@ -1,0 +1,6 @@
+# Allow all crawlers (Googlebot, Naverbot/Yeti, Bingbot, etc.)
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.su-space.com/sitemap.xml
