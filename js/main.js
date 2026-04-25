@@ -257,9 +257,36 @@
       formConfirmation.classList.add('is-visible');
     }
 
+    // Recipient address for contact inquiries. Update here if the destination changes.
+    var CONTACT_RECIPIENT = 'ds70888@naver.com';
+
+    function buildMailto() {
+      var name = fields.name.input.value.trim();
+      var email = fields.email.input.value.trim();
+      var phone = fields.phone.input.value.trim();
+      var message = fields.message.input.value.trim();
+
+      var subject = '[홈페이지 문의] ' + name;
+      var bodyLines = [
+        '이름: ' + name,
+        '이메일: ' + email,
+        '전화번호: ' + (phone || '-'),
+        '',
+        '문의 내용:',
+        message
+      ];
+
+      return 'mailto:' + encodeURIComponent(CONTACT_RECIPIENT)
+        + '?subject=' + encodeURIComponent(subject)
+        + '&body=' + encodeURIComponent(bodyLines.join('\n'));
+    }
+
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
       if (validateForm()) {
+        // Open the user's default mail client with the inquiry pre-filled.
+        // Navigating the current window avoids popup blockers that can suppress window.open.
+        window.location.href = buildMailto();
         showConfirmation();
       }
     });
