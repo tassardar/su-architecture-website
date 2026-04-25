@@ -467,12 +467,15 @@ body.js-enabled .no-js-nav {
 
 .section-header {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 5vw, 2rem);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-cream);
   margin-bottom: var(--space-xl);
   font-weight: 300;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: keep-all;
 }
 
 /* ---------- Project Page — Full-bleed Layout ---------- */
