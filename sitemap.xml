@@ -39,6 +39,10 @@
       <image:loc>https://www.su-space.com/images/5-1.jpeg</image:loc>
       <image:title>단독주택 단지</image:title>
     </image:image>
+    <image:image>
+      <image:loc>https://www.su-space.com/images/6-1.png</image:loc>
+      <image:title>다세대주택</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.su-space.com/interior.html</loc>
